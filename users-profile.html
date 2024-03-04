@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Users / Profile - Legavoice</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+        integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Option 1: Include in HTML -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"> -->
+
+
+    <!-- Favicons -->
+    <link href="Asset 12x.png" rel="icon">
+    <link href="apple-touch-icon.png" rel="apple-touch-icon">
+
+    <script src="profile.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/css/boxicons.min.css" rel="stylesheet">
+    <link href="../assets/css/quill.snow.css" rel="stylesheet">
+    <link href="../assets/css/quill.bubble.css" rel="stylesheet">
+    <link href="../assets/css/remixicon.css" rel="stylesheet">
+    <link href="simple-datatables.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top d-flex align-items-center">
+
+        <div class="d-flex align-items-center justify-content-between">
+            <a href="dashboard.html" class="logo d-flex align-items-center">
+                <img src="Asset 5@2x.png" alt="legavoice logo" style="max-width: 185px;">
+                <!-- <span class="d-none d-lg-block">NiceAdmin</span> -->
+            </a>
+            <i class="bi bi-list toggle-sidebar-btn"></i>
+        </div><!-- End Logo -->
+
+        <nav class="header-nav ms-auto">
+            <ul class="d-flex align-items-center">
+
+                <li class="nav-item d-block d-lg-none">
+                    <a class="nav-link nav-icon search-bar-toggle " href="#">
+                        <i class="bi bi-search"></i>
+                    </a>
+                </li><!-- End Search Icon-->
+
+                <li class="nav-item dropdown pe-3">
+
+                    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                        <img src="images-02.jpg" alt="Profile" class="rounded-circle">
+                        <span class="d-none d-md-block dropdown-toggle ps-2">V. Aacharya</span>
+                    </a><!-- End Profile Iamge Icon -->
+
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                        <li class="dropdown-header">
+                            <h6>Vikramraj Aacharya</h6>
+                            <span>Director</span>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="users-profile.html"
+                                onclick="getData();">
+                                <i class="bi bi-person"></i>
+                                <span>My Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="index.html">
+                                <i class="bi bi-box-arrow-right"></i>
+                                <span>Log Out</span>
+                            </a>
+                        </li>
+
+                    </ul><!-- End Profile Dropdown Items -->
+                </li><!-- End Profile Nav -->
+
+            </ul>
+        </nav><!-- End Icons Navigation -->
+
+    </header><!-- End Header -->
+
+    <!-- ======= Sidebar ======= -->
+    <aside id="sidebar" class="sidebar">
+
+        <ul class="sidebar-nav" id="sidebar-nav">
+
+            <li class="nav-item">
+                <a class="nav-link " href="dashboard.html">
+                    <i class="bi bi-grid"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <!-- End Dashboard Nav -->
+
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+                    <i class="bi bi-house-door-fill"></i><span>Home</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="header.html">
+                            <i class="bi bi-circle"></i><span>Header</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+            <!-- End Components Nav -->
+
+
+
+
+            <!-- <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-journal-text"></i><span>About Us</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="About-us.html">
+                        <i class="bi bi-circle"></i><span>About Us Content</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="About-us-Achievement.html">
+                        <i class="bi bi-circle"></i><span>Achievements</span>
+                    </a>
+                </li>
+            </ul>
+        </li> -->
+            <!-- End Forms Nav -->
+
+
+
+            <!-- <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-layout-text-window-reverse"></i><span>Our Services</span><i
+                    class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="infoservice.html">
+                        <i class="bi bi-circle"></i><span>Services</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Services.html">
+                        <i class="bi bi-circle"></i><span>Service Content</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Services2.html">
+                        <i class="bi bi-circle"></i><span>Why IBG Infotech</span>
+                    </a>
+                </li>
+            </ul>
+        </li> -->
+            <!-- End Tables Nav -->
+
+
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="gallery.html">
+                    <i class="bi bi-bar-chart"></i><span>Gallery</span>
+                </a>
+            </li>
+            <!-- End Charts Nav -->
+
+
+
+            <!-- <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-clipboard-data-fill"></i><span>Careers</span><i
+                    class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="career-content.html">
+                        <i class="bi bi-circle"></i><span>Career Content</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="career.html">
+                        <i class="bi bi-circle"></i><span>Career Form</span>
+                    </a>
+                </li>
+            </ul>
+        </li> -->
+            <!-- End Icons Nav -->
+
+
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="blogreply.html">
+                    <i class="bi bi-database-fill"></i>
+                    <span>Blog Reply</span>
+                </a>
+            </li>
+
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="contactus.html">
+                    <i class="bi bi-person-fill"></i>
+                    <span>Contact Us</span>
+                </a>
+            </li>
+            <!-- End Icons Nav -->
+
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="book-appointment.html">
+                    <i class="bi bi-person-fill"></i>
+                    <span>Book Appointment</span>
+                </a>
+            </li>
+            <!-- End Contact Page Nav -->
+
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="footer.html">
+                    <i class="bi bi-geo-fill"></i>
+                    <span>Footer</span>
+                </a>
+            </li>
+
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="company-contact.html">
+                    <i class="bi bi-person-fill"></i>
+                    <span>Company Contact</span>
+                </a>
+            </li>
+            <!-- End Contact Page Nav -->
+
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="pages-register.html">
+                    <i class="bi bi-card-list"></i>
+                    <span>Register</span>
+                </a>
+            </li>
+        </ul>
+
+    </aside>
+    <!-- End Sidebar-->
+
+
+    <main id="main" class="main">
+
+        <div class="pagetitle">
+            <h1>Profile</h1>
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="Dashboard.html">Home</a></li>
+                    <li class="breadcrumb-item active">Profile</li>
+                </ol>
+            </nav>
+        </div><!-- End Page Title -->
+
+        <section class="section profile">
+            <div class="row">
+                <!-- <div class="col-xl-4">
+
+                    <div class="card">
+                        <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
+
+                            <img src="new.jpg" alt="Profile" class="rounded-circle">
+                            <h2>Ravina Pawar</h2>
+                            <h3>Director</h3> -->
+                <!-- 
+                            <div class="social-links mt-2">
+                                <a href="https://www.facebook.com/ibginfotechpvtltd?mibextid=ZbWKwL" class="facebook"
+                                    target="_blank"><i class="bi bi-facebook"></i></a>
+                                <a href="https://www.instagram.com/ibginfotechpvtltd/" class="instagram"
+                                    target="_blank"><i class="bi bi-instagram"></i></a>
+                                <a href="https://www.linkedin.com/company/ibg-infotech-pvt-ltd/mycompany/"
+                                    class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>  -->
+
+                <div class="col-xl-8">
+
+                    <div class="card">
+                        <div class="card-body pt-3">
+                            <!-- Bordered Tabs -->
+                            <ul class="nav nav-tabs nav-tabs-bordered">
+
+                                <li class="nav-item">
+                                    <button class="nav-link active" data-bs-toggle="tab"
+                                        data-bs-target="#profile-overview">Overview</button>
+                                </li>
+
+                                <li class="nav-item">
+                                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit"
+                                        onclick="getData();">Edit
+                                        Profile</button>
+                                </li>
+
+
+                                <li class="nav-item">
+                                    <button class="nav-link" data-bs-toggle="tab"
+                                        data-bs-target="#profile-change-password">Change Password</button>
+                                </li>
+
+                            </ul>
+                            <div class="tab-content pt-2">
+
+                                <div class="tab-pane fade show active profile-overview" id="profile-overview">
+
+                                    <h5 class="card-title">Profile Details</h5>
+
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-4 label">First Name</div>
+                                        <div class="col-lg-9 col-md-8" id="firstNameValue"></div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-4 label">Last Name</div>
+                                        <div class="col-lg-9 col-md-8" id="lastNameValue"></div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-4 label">Phone Number</div>
+                                        <div class="col-lg-9 col-md-8" id="numberValue"></div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-4 label">Email</div>
+                                        <div class="col-lg-9 col-md-8" id="email"></div>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
+
+                                    <!-- Profile Edit Form -->
+                                    <form id="userProfileForm">
+
+                                        <div class="row mb-3">
+                                            <!-- ID field is hidden -->
+                                            <input name="id" type="hidden" class="form-control" id="id">
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label for="firstNameValue1" class="col-md-4 col-lg-3 col-form-label">First
+                                                Name</label>
+                                            <div class="col-md-8 col-lg-9">
+                                                <input name="firstNameValue1" type="text" class="form-control"
+                                                    id="firstNameValue1">
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label for="lastNameValue1" class="col-md-4 col-lg-3 col-form-label">Last
+                                                Name</label>
+                                            <div class="col-md-8 col-lg-9">
+                                                <input name="lastNameValue1" type="text" class="form-control"
+                                                    id="lastNameValue1">
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label for="numberValue1"
+                                                class="col-md-4 col-lg-3 col-form-label">Phone</label>
+                                            <div class="col-md-8 col-lg-9">
+                                                <input name="numberValue1" type="text" class="form-control"
+                                                    id="numberValue1">
+                                            </div>
+                                        </div>
+
+                                        <div class="text-center">
+                                            <button type="button" class="btn btn-primary"
+                                                onclick="updateUserProfile();">Save Changes</button>
+                                        </div>
+                                    </form>
+
+                                    <!-- End Profile Edit Form -->
+
+                                </div>
+
+                                <div class="tab-pane fade pt-3" id="profile-settings">
+
+
+                                </div>
+
+                                <div class="tab-pane fade pt-3" id="profile-change-password">
+
+                                    <!-- Change Password Form -->
+                                    <form id="passwordChangeForm">
+                                        <div class="row mb-3">
+                                            <label for="currentPassword"
+                                                class="col-md-4 col-lg-3 col-form-label">Current Password</label>
+                                            <div class="col-md-8 col-lg-9">
+                                                <input name="oldPass" type="password" class="form-control" id="oldPass">
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label for="newPassword" class="col-md-4 col-lg-3 col-form-label">New
+                                                Password</label>
+                                            <div class="col-md-8 col-lg-9">
+                                                <input name="newPassword" type="password" class="form-control"
+                                                    id="newPassword">
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label for="reenterPassword"
+                                                class="col-md-4 col-lg-3 col-form-label">Re-enter New Password</label>
+                                            <div class="col-md-8 col-lg-9">
+                                                <input name="reenterPassword" type="password" class="form-control"
+                                                    id="reenterPassword">
+                                            </div>
+                                        </div>
+
+                                        <div class="text-center">
+                                            <button type="button" class="btn btn-primary"
+                                                onclick="savePassword()">Change Password</button>
+                                        </div>
+                                    </form>
+                                </div>
+
+                            </div><!-- End Bordered Tabs -->
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <!-- <footer id="footer" class="footer">
+        <div class="copyright">
+            &copy; Copyright <strong><span>IBG-Infotech Pvt.Ltd</span></strong>. All Rights Reserved
+        </div>
+    </footer> -->
+    <!-- End Footer -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script data-cfasync="false" src="email-decode.min.js"></script>
+    <script src="apexcharts.min.js"></script>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="chart.umd.js"></script>
+    <script src="echarts.min.js"></script>
+    <script src="quill.min.js"></script>
+    <script src="simple-datatables.js"></script>
+    <script src="tinymce.min.js"></script>
+    <script src="validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="main.js"></script>
+
+    <script async src='https://www.googletagmanager.com/gtag/js?id=G-P7JSYB1CSP'></script>
+    <script>if (window.self == window.top) { window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-P7JSYB1CSP'); } </script>
+    <script defer
+        src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317"
+        integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA=="
+        data-cf-beacon='{"rayId":"84653c5c5aae1bcc","version":"2023.10.0","token":"68c5ca450bae485a842ff76066d69420"}'
+        crossorigin="anonymous"></script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const userData = JSON.parse(localStorage.getItem('userData'));
+            if (userData) {
+                console.log('Retrieved updateData:', userData);
+                // Update form fields with retrieved data
+                // var id = document.getElementById('id').value;
+                document.getElementById('firstNameValue1').value = userData.firstName;
+                document.getElementById('lastNameValue1').value = userData.lastName;
+                document.getElementById('numberValue1').value = userData.number;
+                document.getElementById('id').value = userData.id;
+                document.getElementById('email1').value = userData.email;
+            } else {
+                console.error('No update data found in local storage');
+            }
+            userData();
+        });
+    </script>
+
+
+
+</body>
+
+</html>
